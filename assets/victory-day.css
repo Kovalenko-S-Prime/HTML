@@ -1,0 +1,210 @@
+html.victory{
+  --bg:#120f12;
+  --panel:#1b1414;
+  --panel-2:#211818;
+  --text:#fff8ef;
+  --muted:#e9d8c4;
+  --brand:#c62828;
+  --brand-2:#d4af37;
+  --accent:#ff8c00;
+  --outline:#3a2a2a;
+  --ring:#c62828;
+}
+/* === Softer, smoother background for Victory theme === */
+html.victory body {
+  background: linear-gradient(
+      180deg,
+      #1a0e0e 0%,
+      #241212 25%,
+      #2a1512 45%,
+      #311913 70%,
+      #1c0d0d 100%
+    ),
+    radial-gradient(
+      1200px 700px at 50% -200px,
+      rgba(198, 40, 40, 0.25),
+      transparent 80%
+    ),
+    radial-gradient(
+      1000px 400px at 50% 120%,
+      rgba(212, 175, 55, 0.15),
+      transparent 80%
+    );
+  background-blend-mode: overlay, normal, normal;
+  background-color: #120f12;
+  color: var(--text);
+}
+
+.victory-banner{display:none}
+html.victory .hero .eyebrow{ color: var(--brand-2); }
+html.victory .btn--primary{ background: linear-gradient(135deg,var(--brand),#8b0000); }
+html.victory a{ color: var(--brand-2); }
+html.victory .card{ border-color:#3a2929; box-shadow: 0 12px 40px rgba(198,40,40,.12); }
+html.victory .pill{ background:#2a1917; color:#ffd7a6; }
+html.victory footer{ border-top-color:#3a2929; }
+html.victory .hero{ position:relative; overflow:hidden; }
+
+/* === Alternating background tones for sections === */
+
+/* General defaults */
+.section {
+  background: var(--panel);
+  position: relative;
+  z-index: 0;
+}
+
+/* Home hero (darkest) */
+.hero {
+  background: radial-gradient(900px 400px at 70% -120px, #3a0f0f55, transparent),
+              linear-gradient(180deg, #120d0c 0%, #1a0f0d 100%);
+}
+
+/* Medals — warm orange highlight */
+/* Medals — lighter, warm orange-golden background */
+#medals {
+  background: linear-gradient(
+    180deg,
+    #4b2a12 0%,
+    #5a3012 30%,
+    #6a3510 60%,
+    #4a2a12 100%
+  );
+  box-shadow:
+    0 -40px 60px rgba(0,0,0,.35) inset,
+    0 20px 40px rgba(0,0,0,.3) inset;
+  position: relative;
+}
+
+/* Optional subtle texture glow */
+#medals::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    1000px 600px at 50% 0,
+    rgba(212,175,55,0.15),
+    transparent 70%
+  );
+  z-index: 0;
+}
+
+
+/* Video — darker focus section */
+#video {
+  background: linear-gradient(180deg, #140b0b 0%, #1a0d0d 100%);
+}
+
+/* About — lighter golden section */
+#about {
+  background: linear-gradient(180deg, #3e200d 0%, #4a240a 100%);
+}
+
+/* FAQ — medium dark */
+#faq {
+  background: linear-gradient(180deg, #1a0e0e 0%, #241212 100%);
+}
+
+/* Contact — darkest for form */
+#contact {
+  background: linear-gradient(180deg, #120b0b 0%, #1a0d0d 100%);
+}
+
+/* Optional subtle separation between sections */
+.section + .section {
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+/* === Better contrast for medal cards & buttons === */
+
+/* Card outline and subtle highlight */
+.card {
+  border: 1px solid rgba(0, 0, 0, 0.8);        /* solid dark outline */
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset, /* faint inner shine */
+    0 6px 18px rgba(0, 0, 0, 0.6);             /* outer shadow for depth */
+  background: linear-gradient(180deg, rgba(30, 20, 20, 0.9), rgba(40, 28, 20, 0.85));
+}
+
+/* On hover, make the outline a bit more golden/red */
+.card:hover {
+  border-color: rgba(198, 40, 40, 0.8);
+  box-shadow:
+    0 0 0 1px rgba(212, 175, 55, 0.3) inset,
+    0 10px 28px rgba(198, 40, 40, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Buttons inside cards */
+.card .btn--outline {
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  background: rgba(12, 12, 12, 0.6);
+  color: #f0e9d8;
+  transition: all 0.2s ease-in-out;
+}
+
+.card .btn--outline:hover {
+  background: rgba(198, 40, 40, 0.3);
+  border-color: rgba(198, 40, 40, 0.9);
+  color: #fff6e1;
+}
+
+/* Primary buttons (global) — dark edge for visibility */
+.btn--primary {
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1),
+              0 6px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* Subtler, darker blue buttons inside medal cards */
+.card .btn--outline {
+  border: 1px solid rgba(70, 130, 180, 0.9);     /* steel blue border */
+  background: rgba(35, 60, 90, 0.4);             /* darker semi-transparent fill */
+  color: #a8c9e8;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
+  transition: all 0.25s ease-in-out;
+}
+
+.card .btn--outline:hover {
+  background: rgba(60, 110, 160, 0.45);
+  border-color: rgba(110, 170, 220, 0.9);
+  color: #d9edff;
+  box-shadow: 0 0 10px rgba(90, 150, 210, 0.4);
+}
+
+
+/* === FAQ section visual improvements === */
+
+/* Add space below section title */
+#faq h2 {
+  margin-bottom: 24px; /* gives breathing room above first question */
+}
+
+/* Lighter, visible outlines for FAQ items */
+.faq-item {
+  border: 1px solid rgba(255, 255, 255, 0.15);  /* lighter outline */
+  background: rgba(20, 12, 12, 0.6);           /* soft translucent contrast */
+  border-radius: 12px;
+  margin-bottom: 14px;                         /* spacing between questions */
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+/* Slight highlight on hover/focus */
+.faq-item:hover,
+.faq-item:focus-within {
+  border-color: rgba(212, 175, 55, 0.4);       /* subtle golden highlight */
+  background: rgba(30, 18, 18, 0.7);
+}
+
+/* Optional: improve question visibility */
+.faq-q {
+  font-weight: 700;
+  color: #f3f3f3;
+}
+
+/* Optional: soften the answer background if expanded */
+.faq-a {
+  background: rgba(255, 255, 255, 0.03);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0 0 12px 12px;
+}
