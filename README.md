@@ -1,1 +1,2 @@
-Русская версия сайта с постоянной темой Дня Победы, улучшенными карточками и видео-секцией.
+Test website about selling medals
+https://kovalenko-s-prime.github.io/HTML/
